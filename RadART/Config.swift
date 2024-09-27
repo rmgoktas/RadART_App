@@ -8,5 +8,5 @@
 import Foundation
 
 struct Config {
-    static let serverURL = "http://35.156.39.139:5000/predict"
+    static let serverURL = "http://18.156.114.113:5000/predict"
 }
