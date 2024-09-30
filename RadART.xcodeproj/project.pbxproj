@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9951E8B82CA7530A001F7B6E /* Prediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951E8B72CA75303001F7B6E /* Prediction.swift */; };
+		9951E8BB2CA75330001F7B6E /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9951E8BA2CA75328001F7B6E /* ImageViewModel.swift */; };
+		9951E8C12CAB5896001F7B6E /* CropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 9951E8C02CAB5896001F7B6E /* CropViewController */; };
+		9951E8C32CAB5896001F7B6E /* TOCropViewController in Frameworks */ = {isa = PBXBuildFile; productRef = 9951E8C22CAB5896001F7B6E /* TOCropViewController */; };
 		9973CEB82B7401E00001AFE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973CEB72B7401E00001AFE6 /* AppDelegate.swift */; };
 		9973CEBA2B7401E00001AFE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973CEB92B7401E00001AFE6 /* SceneDelegate.swift */; };
 		9973CEBC2B7401E00001AFE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9973CEBB2B7401E00001AFE6 /* ViewController.swift */; };
@@ -17,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9951E8B72CA75303001F7B6E /* Prediction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prediction.swift; sourceTree = "<group>"; };
+		9951E8BA2CA75328001F7B6E /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		9973CEB42B7401E00001AFE6 /* RadART.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadART.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9973CEB72B7401E00001AFE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9973CEB92B7401E00001AFE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -33,12 +39,55 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9951E8C32CAB5896001F7B6E /* TOCropViewController in Frameworks */,
+				9951E8C12CAB5896001F7B6E /* CropViewController in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9951E8B62CA752ED001F7B6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9951E8B72CA75303001F7B6E /* Prediction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9951E8B92CA7531C001F7B6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9951E8BA2CA75328001F7B6E /* ImageViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9951E8BC2CA7537E001F7B6E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				9973CEB72B7401E00001AFE6 /* AppDelegate.swift */,
+				9973CEB92B7401E00001AFE6 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		9951E8BD2CA753BF001F7B6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9973CEBB2B7401E00001AFE6 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9951E8BE2CA753CC001F7B6E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				9973CECB2B74048B0001AFE6 /* Config.swift */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
 		9973CEAB2B7401E00001AFE6 = {
 			isa = PBXGroup;
 			children = (
@@ -58,10 +107,11 @@
 		9973CEB62B7401E00001AFE6 /* RadART */ = {
 			isa = PBXGroup;
 			children = (
-				9973CECB2B74048B0001AFE6 /* Config.swift */,
-				9973CEB72B7401E00001AFE6 /* AppDelegate.swift */,
-				9973CEB92B7401E00001AFE6 /* SceneDelegate.swift */,
-				9973CEBB2B7401E00001AFE6 /* ViewController.swift */,
+				9951E8BE2CA753CC001F7B6E /* Configuration */,
+				9951E8BD2CA753BF001F7B6E /* View */,
+				9951E8BC2CA7537E001F7B6E /* Application */,
+				9951E8B92CA7531C001F7B6E /* ViewModel */,
+				9951E8B62CA752ED001F7B6E /* Model */,
 				9973CEBD2B7401E00001AFE6 /* Main.storyboard */,
 				9973CEC02B7401E20001AFE6 /* Assets.xcassets */,
 				9973CEC22B7401E20001AFE6 /* LaunchScreen.storyboard */,
@@ -114,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 9973CEAB2B7401E00001AFE6;
+			packageReferences = (
+				9951E8BF2CAB5896001F7B6E /* XCRemoteSwiftPackageReference "TOCropViewController" */,
+			);
 			productRefGroup = 9973CEB52B7401E00001AFE6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,9 +194,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9951E8BB2CA75330001F7B6E /* ImageViewModel.swift in Sources */,
 				9973CEBC2B7401E00001AFE6 /* ViewController.swift in Sources */,
 				9973CECC2B74048B0001AFE6 /* Config.swift in Sources */,
 				9973CEB82B7401E00001AFE6 /* AppDelegate.swift in Sources */,
+				9951E8B82CA7530A001F7B6E /* Prediction.swift in Sources */,
 				9973CEBA2B7401E00001AFE6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +422,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9951E8BF2CAB5896001F7B6E /* XCRemoteSwiftPackageReference "TOCropViewController" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TimOliver/TOCropViewController";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.7.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9951E8C02CAB5896001F7B6E /* CropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9951E8BF2CAB5896001F7B6E /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = CropViewController;
+		};
+		9951E8C22CAB5896001F7B6E /* TOCropViewController */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9951E8BF2CAB5896001F7B6E /* XCRemoteSwiftPackageReference "TOCropViewController" */;
+			productName = TOCropViewController;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9973CEAC2B7401E00001AFE6 /* Project object */;
 }
